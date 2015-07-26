@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+
+        var dataTable = new google.visualization.DataTable();
+        dataTable.addColumn('string','Country');
+        dataTable.addColumn('number','Percentage');
+
+        var text = jsonString.getJsonString();
+        console.log(text);
+        obj = JSON.parse(text);
+
+        //var arr;
+    var rows = new Array();
+    for (var key in obj) {
+        var mainObject = obj[key];
+            for (var key in mainObject) {
+                var jsonObject = mainObject[key];
+                    rows.push([jsonObject.country, parseFloat(jsonObject.percentage)]);
+
+
+}
+
+    dataTable.addRows(rows);
+
+    var options = {
+          title: 'User Demographic'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(dataTable, options);
+      }
+      }
+    </script>
+</head>
+<body>
+<div id="piechart" style="width: 600px; height: 550px;"></div>
+</body>
+</html>
+
+

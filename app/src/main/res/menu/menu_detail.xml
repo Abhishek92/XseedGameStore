@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.android.gamestore.DetailActivity">
+    <item android:id="@+id/action_app_store" android:title="Play Store"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_send_sms" android:title="Send SMS"
+        android:orderInCategory="100" app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_item_share"
+        app:showAsAction="ifRoom"
+        android:title="Share"
+        app:actionProviderClass="android.support.v7.widget.ShareActionProvider" />
+</menu>

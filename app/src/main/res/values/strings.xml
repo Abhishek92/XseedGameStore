@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">XSEED Game Store</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="check_internet">No internet connection</string>
+    <string name="game">Game Store</string>
+    <string name="game_detail">Game Details</string>
+    <string name="loading_chart">Loading Chart...</string>
+</resources>
